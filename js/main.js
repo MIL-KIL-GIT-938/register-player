@@ -1,15 +1,19 @@
-function onTelegramAuth(user) {
-    document.getElementById('hell_2').innerHTML = user.first_name;
-    document.getElementById('hell').textContent = 'Привет, ' + user.first_name + '!';
-    aut = 'Привет, ' + user.first_name + '!';
-}
-
 var result = document.getElementById('result');
 var number = 0;
-var aut = document.getElementById('hell').textContent;
+var aut = "";
+
+function onTelegramAuth(user) {
+    aut = user.first_name;
+    document.getElementById('hell_2').innerHTML = aut;
+    if (aut === '') {
+        document.getElementById('hell').textContent = 'Добро пожаловать незнакомец!';
+    } else {
+        document.getElementById('hell').textContent = 'Привет, ' + aut + '!';
+    }
+}
 
 function OnClickButton() {
-    if (aut === 'Добро пожаловать незнакомец!' || aut === '') {
+    if (aut === '') {
         alert('Авторизуйтесь! Через телеграмм!');
     } else {
         number++;
