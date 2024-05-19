@@ -23,41 +23,6 @@
     </div>
 
     <script src="js/main.js"></script>
-
-    <div id="content">
-        <h1 id="greeting"></h1>
-        <img id="photo" alt="User Photo" width="150" height="150" />
-    </div>
-
-    <script type="text/javascript">
-        function getQueryParams() {
-            const params = {};
-            const queryString = window.location.search;
-            const urlParams = new URLSearchParams(queryString);
-            for (const [key, value] of urlParams.entries()) {
-                params[key] = value;
-            }
-            return params;
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const params = getQueryParams();
-            const greeting = document.getElementById('greeting');
-            const photo = document.getElementById('photo');
-
-            if (params.first_name) {
-                greeting.textContent = `Привет, ${params.first_name}!`;
-            } else {
-                greeting.textContent = 'Привет!';
-            }
-
-            if (params.photo_url) {
-                photo.src = params.photo_url;
-            } else {
-                photo.alt = 'Нет фото';
-            }
-        });
-    </script>
     
 </body>
 </html>
