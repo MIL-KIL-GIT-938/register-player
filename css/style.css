@@ -28,6 +28,23 @@ body{
     font-style: italic;
 }
 
+#foto {
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px; /* Регулируйте радиус, чтобы изменить степень скругления краев */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Добавляет тень: сдвиг по x, сдвиг по y, размытие, цвет */
+    background-image: url(https://test.apmech.ru/wp-content/uploads/2020/04/20170508194943.png);
+    background-size: contain; /* Изменено на cover для заполнения всей области блока */
+    background-position: center; /* Центрирование фонового изображения */
+    z-index: 1;
+    background-repeat: no-repeat;
+}
+
 #result_2 {
     display: none;
     width: 70%;
@@ -53,4 +70,43 @@ body{
 #result_3 {
     text-align: center;
     margin-top: 20%;
+}
+
+#warning-message {
+    display: none;
+    text-align: center;
+    margin-top: 100px;
+    background-size: 20px;
+    
+}
+
+@media only screen and (orientation:portrait) {
+    #wrapper {
+        display: none;
+    }
+
+    #warning-message {
+        display: block;
+    }
+
+    body{
+        background: aliceblue;
+    }
+}
+
+@media only screen and (orientation:landscape) {
+    #wrapper {
+        display: block;
+    }
+
+    #warning-message {
+        display: none;
+    }
+
+    body{
+        background-image: url(https://catherineasquithgallery.com/uploads/posts/2021-03/1614633378_21-p-doski-fon-dlya-fotoshopa-35.jpg);
+        background-size: cover; /* Изменено на cover для заполнения всей области блока */
+        background-position: center; /* Центрирование фонового изображения */
+        background-repeat: no-repeat;
+    }
 }
