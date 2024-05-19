@@ -1,3 +1,10 @@
+body{
+    background-image: url(https://catherineasquithgallery.com/uploads/posts/2021-03/1614633378_21-p-doski-fon-dlya-fotoshopa-35.jpg);
+    background-size: cover; /* Изменено на cover для заполнения всей области блока */
+    background-position: center; /* Центрирование фонового изображения */
+    background-repeat: no-repeat;
+}
+
 #div_global {
     text-align: center;
     margin-top: 15%;
@@ -7,7 +14,7 @@
     border-radius: 50px;
     color: blue;
     background-color: rgb(214, 125, 125);
-    width: 50%;
+    width: 500px;
     height: 40px;
     font-size: 25px;
 }
@@ -19,4 +26,31 @@
 
 #hell_2 {
     font-style: italic;
+}
+
+#result_2 {
+    display: none;
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    border-radius: 10px; /* Регулируйте радиус, чтобы изменить степень скругления краев */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Добавляет тень: сдвиг по x, сдвиг по y, размытие, цвет */
+    background-image: url(https://kartinkived.ru/wp-content/uploads/2021/11/zvezdnyj-fon.jpg);
+    background-size: cover; /* Изменено на cover для заполнения всей области блока */
+    background-position: center; /* Центрирование фонового изображения */
+    background-repeat: no-repeat;
+}
+
+#text_result {
+    text-align: center;
+}
+
+#result_3 {
+    text-align: center;
+    margin-top: 20%;
 }
