@@ -1,54 +1,39 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Регистрация!</title>
-    <style>
-        body,
-        html {
-            height: 100%;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #center {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column; /* Добавлено для вертикального выравнивания кнопки и сообщения */
-        }
-    </style>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-
 <body>
-    <div id="center">
-        <div id="telegram-widget"></div>
-        <button onclick="checkAuthorization()">Проверить авторизацию</button>
-        <p id="authorization-status"></p>
+    <noscript>
+        Включите JavaScript!!!
+    </noscript>
+    <div id="div_global">
+        <h1 id="hell">Добро пожаловать сюда!</h1>
+        <h1 id="null"></h1>
+        <h1 id="info">Здесь мы с вами поиграем в игру</h1>
+        <h1 id="null_2"></h1>
+        <h1 id="pravila">Ваша задача кликать на кнопку, чем больше тем лучше! Удачи!</h1>
+        <h1 id="null_3"></h1>
+        <button id="bt" onclick="OnClickButton()">Клик!</button>
+        <h1 id="null_4"></h1>
+        <h1 id="result"></h1>
     </div>
 
-    <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-login="clicker338_bot"
-        data-size="large" data-userpic="false" data-onauth="onTelegramAuth(user)"
-        data-request-access="write"></script>
-    <script type="text/javascript">
-        function onTelegramAuth(user) {
-            alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
-        }
+    <script src="js/main.js"></script>
 
-        function checkAuthorization() {
-            var authStatus = document.getElementById("authorization-status");
-            if (TelegramLogin.authResponse) {
-                var user = TelegramLogin.authResponse.user;
-                authStatus.textContent = 'Пользователь ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ') авторизован.';
-            } else {
-                authStatus.textContent = 'Пользователь не авторизован.';
+    <div id="center">
+        <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-login="clicker338_bot"
+            data-size="large" data-userpic="false" data-onauth="onTelegramAuth(user)"
+            data-request-access="write"></script>
+        <script type="text/javascript">
+            function onTelegramAuth(user) {
+                alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
             }
-        }
-    </script>
-</body>
+        </script>
+    </div>
 
+</body>
 </html>
