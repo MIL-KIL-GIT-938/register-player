@@ -11,7 +11,7 @@
         Включите JavaScript!!!
     </noscript>
     <div id="div_global">
-        <h1 id="hell">Добро пожаловать незнакомец!</h1>
+        <h1 id="hell">Добро пожаловать <span id="hell_2">незнакомец</span>!</h1>
         <h1 id="null"></h1>
         <h1 id="info">Здесь мы с вами поиграем в игру</h1>
         <h1 id="null_2"></h1>
@@ -30,7 +30,7 @@
             data-request-access="write"></script>
         <script type="text/javascript">
             function onTelegramAuth(user) {
-                document.getElementById('hell').innerHTML = 'Добро пожаловать ' + user.first_name;
+                document.getElementById('hell_2').innerHTML = user.first_name;
             }
         </script>
     </div>
