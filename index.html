@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Регистрация!</title>
     <style>
-        body,
-        html {
+        body, html {
             height: 100%;
             margin: 0;
             display: flex;
@@ -26,11 +25,36 @@
 <body>
     <div id="center">
         <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-login="clicker338_bot"
-            data-size="large" data-userpic="false"
-            data-auth-url="https://mil-kil-git-938.github.io/register-player/indexq.html?" data-request-access="write">
+            data-size="large" data-onauth="onTelegramAuth(user)" data-request-access="write"></script>
+        <script type="text/javascript">
+            function onTelegramAuth(user) {
+                const userData = {
+                    id: user.id,
+                    first_name: user.first_name,
+                    last_name: user.last_name,
+                    username: user.username,
+                    photo_url: user.photo_url,
+                    auth_date: user.auth_date,
+                    hash: user.hash
+                };
+
+                const targetUrl = 'https://mil-kil-git-938.github.io/register-player/indexq.html';  // замените на URL вашего второго сайта
+                const form = document.createElement('form');
+                form.method = 'POST';
+                form.action = targetUrl;
+                form.target = '_self';
+
+                const input = document.createElement('input');
+                input.type = 'hidden';
+                input.name = 'userData';
+                input.value = JSON.stringify(userData);
+
+                form.appendChild(input);
+                document.body.appendChild(form);
+                form.submit();
+            }
         </script>
     </div>
-
 </body>
 
 </html>
