@@ -11,7 +11,6 @@
         Включите JavaScript!!!
     </noscript>
     <div id="div_global">
-        <img src="" alt="">
         <h1 id="hell">Добро пожаловать незнакомец!</h1>
         <h1 id="null"></h1>
         <h1 id="info">Здесь мы с вами поиграем в игру</h1>
@@ -32,7 +31,6 @@
         <script type="text/javascript">
             function onTelegramAuth(user) {
                 document.getElementById('hell').innerHTML = 'Добро пожаловать ' + user.first_name;
-                document.getElementById('foto').scr = user.photo_url;
             }
         </script>
     </div>
