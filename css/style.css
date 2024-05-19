@@ -1,0 +1,13 @@
+#div_global {
+    text-align: center;
+    margin-top: 15%;
+}
+
+#bt {
+    border-radius: 50px;
+    color: blue;
+    background-color: rgb(214, 125, 125);
+    width: 500px;
+    height: 40px;
+    font-size: 25px;
+}
